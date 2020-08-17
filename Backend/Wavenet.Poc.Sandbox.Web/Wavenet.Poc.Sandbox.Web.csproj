@@ -184,6 +184,28 @@
       <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
       <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Wavenet.Poc.Sandbox.Business\Wavenet.Poc.Sandbox.Business.csproj">
+        <Project>{b4292f97-56aa-46ea-8287-a2222b3474d6}</Project>
+        <Name>Wavenet.Poc.Sandbox.Business</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Wavenet.Poc.Sandbox.Core\Wavenet.Poc.Sandbox.Core.csproj">
+        <Project>{db0dd8ad-7bb7-4fa1-8889-29eff7418150}</Project>
+        <Name>Wavenet.Poc.Sandbox.Core</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Wavenet.Poc.Sandbox.Data.Fake\Wavenet.Poc.Sandbox.Data.Fake.csproj">
+        <Project>{12d6a04e-85a5-4964-ac62-072b71fcd0e9}</Project>
+        <Name>Wavenet.Poc.Sandbox.Data.Fake</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Wavenet.Poc.Sandbox.Data.Sql\Wavenet.Poc.Sandbox.Data.Sql.csproj">
+        <Project>{8738b2fb-802c-4907-a845-3e35cfe63e2e}</Project>
+        <Name>Wavenet.Poc.Sandbox.Data.Sql</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Wavenet.Poc.Sandbox.Data\Wavenet.Poc.Sandbox.Data.csproj">
+        <Project>{b6895d8f-2641-4518-b24b-aad484017463}</Project>
+        <Name>Wavenet.Poc.Sandbox.Data</Name>
+      </ProjectReference>
+    </ItemGroup>
     <PropertyGroup>
         <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
         <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
