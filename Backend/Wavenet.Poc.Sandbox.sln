@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavenet.Poc.Sandbox.Web", "Wavenet.Poc.Sandbox.Web\Wavenet.Poc.Sandbox.Web.csproj", "{DDEC4416-A120-49D2-948D-F1D9CF4825A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavenet.Poc.Sandbox.Core", "Wavenet.Poc.Sandbox.Core\Wavenet.Poc.Sandbox.Core.csproj", "{DB0DD8AD-7BB7-4FA1-8889-29EFF7418150}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavenet.Poc.Sandbox.Data", "Wavenet.Poc.Sandbox.Data\Wavenet.Poc.Sandbox.Data.csproj", "{B6895D8F-2641-4518-B24B-AAD484017463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavenet.Poc.Sandbox.Data.Fake", "Wavenet.Poc.Sandbox.Data.Fake\Wavenet.Poc.Sandbox.Data.Fake.csproj", "{12D6A04E-85A5-4964-AC62-072B71FCD0E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavenet.Poc.Sandbox.Data.Sql", "Wavenet.Poc.Sandbox.Data.Sql\Wavenet.Poc.Sandbox.Data.Sql.csproj", "{8738B2FB-802C-4907-A845-3E35CFE63E2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavenet.Poc.Sandbox.Business", "Wavenet.Poc.Sandbox.Business\Wavenet.Poc.Sandbox.Business.csproj", "{B4292F97-56AA-46EA-8287-A2222B3474D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDEC4416-A120-49D2-948D-F1D9CF4825A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDEC4416-A120-49D2-948D-F1D9CF4825A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDEC4416-A120-49D2-948D-F1D9CF4825A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDEC4416-A120-49D2-948D-F1D9CF4825A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0DD8AD-7BB7-4FA1-8889-29EFF7418150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0DD8AD-7BB7-4FA1-8889-29EFF7418150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0DD8AD-7BB7-4FA1-8889-29EFF7418150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0DD8AD-7BB7-4FA1-8889-29EFF7418150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6895D8F-2641-4518-B24B-AAD484017463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6895D8F-2641-4518-B24B-AAD484017463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6895D8F-2641-4518-B24B-AAD484017463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6895D8F-2641-4518-B24B-AAD484017463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D6A04E-85A5-4964-AC62-072B71FCD0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D6A04E-85A5-4964-AC62-072B71FCD0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D6A04E-85A5-4964-AC62-072B71FCD0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D6A04E-85A5-4964-AC62-072B71FCD0E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8738B2FB-802C-4907-A845-3E35CFE63E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8738B2FB-802C-4907-A845-3E35CFE63E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8738B2FB-802C-4907-A845-3E35CFE63E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8738B2FB-802C-4907-A845-3E35CFE63E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4292F97-56AA-46EA-8287-A2222B3474D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4292F97-56AA-46EA-8287-A2222B3474D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4292F97-56AA-46EA-8287-A2222B3474D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4292F97-56AA-46EA-8287-A2222B3474D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

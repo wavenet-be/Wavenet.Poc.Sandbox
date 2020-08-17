@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Wavenet.Poc.Sandbox.Web.Global" Language="C#" %>
