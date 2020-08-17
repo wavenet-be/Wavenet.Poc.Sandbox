@@ -1,5 +1,12 @@
 <h2>Liste des clients</h2>
 
+<div *ngFor="let client of clients">
+    <h3>
+        <a [title]="client.name + ' details'">
+            {{ client.name }}
+        </a>
+    </h3>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

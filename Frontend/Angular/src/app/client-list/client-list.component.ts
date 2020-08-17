@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { clients } from '../clients';
+import {ClientService} from '../../services/client.service';
 
 @Component({
   selector: 'app-client-list',
@@ -8,7 +9,13 @@ import { clients } from '../clients';
   styleUrls: ['./client-list.component.css']
 })
 export class ClientListComponent {
-  clients = clients;
+
+  clients:any[];
+
+  constructor(private clientService: ClientService)
+  {
+    this.clients = this.clientService.getClients();
+  }
 
   
 }

@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ClientListComponent } from './client-list/client-list.component';
+import { ClientService } from './../services/client.service';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ClientListComponent },
@@ -20,7 +23,8 @@ import { ClientListComponent } from './client-list/client-list.component';
     TopBarComponent,
     ClientListComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
+  providers: [ClientService]
 })
 export class AppModule { }
 
