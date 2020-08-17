@@ -8,7 +8,15 @@ namespace Wavenet.Poc.Sandbox.Web
     using System.Linq;
     using System.Web.Http;
 
+    using AutoMapper;
+
     using LightInject;
+
+    using Wavenet.Poc.Sandbox.Business;
+    using Wavenet.Poc.Sandbox.Business.Concrete;
+    using Wavenet.Poc.Sandbox.Data;
+    using Wavenet.Poc.Sandbox.Data.Fake;
+    using Wavenet.Poc.Sandbox.Data.Fake.Model;
 
     /// <summary>
     /// Register IoC into the project.
@@ -25,6 +33,7 @@ namespace Wavenet.Poc.Sandbox.Web
 
             container.RegisterBusiness();
             container.RegisterData();
+            container.CreateMapper();
 
             container.RegisterApiControllers();
             container.EnableWebApi(GlobalConfiguration.Configuration);
@@ -32,10 +41,28 @@ namespace Wavenet.Poc.Sandbox.Web
 
         private static void RegisterBusiness(this ServiceContainer container)
         {
+            container.Register<IAdminDomain, AdminDomain>();
         }
 
         private static void RegisterData(this ServiceContainer container)
         {
+            container.Register<IClientRepository, ClientRepository>();
+        }
+
+        private static void CreateMapper(this ServiceContainer container)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Core.Client, Model.ClientSummary>();
+                cfg.CreateMap<Core.Client, Model.Client>();
+                cfg.CreateMap<Core.Address, Model.Address>();
+
+                cfg.AddProfile<FakeCsvProfile>();
+            });
+
+            var mapper = config.CreateMapper();
+
+            container.RegisterInstance(mapper);
         }
     }
 }
