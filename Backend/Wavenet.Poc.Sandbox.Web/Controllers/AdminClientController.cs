@@ -7,6 +7,7 @@ namespace Wavenet.Poc.Sandbox.Web.Controllers.Admin
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Net;
     using System.Web.Http;
 
     using AutoMapper;
@@ -43,6 +44,25 @@ namespace Wavenet.Poc.Sandbox.Web.Controllers.Admin
         {
             var clients = this.adminDomain.GetAllClients();
             return this.mapper.Map<List<ClientSummary>>(clients);
+        }
+
+        /// <summary>
+        /// Get all the clients.
+        /// </summary>
+        /// <param name="clientId">The id to get.</param>
+        /// <returns>The list of all clients.</returns>
+        [HttpGet]
+        [Route("api/admin/client/{clientId}")]
+        public Client Get(int clientId)
+        {
+            var client = this.adminDomain.GetClient(clientId);
+
+            if (client == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
+            return this.mapper.Map<Client>(client);
         }
     }
 }

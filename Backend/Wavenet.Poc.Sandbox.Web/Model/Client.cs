@@ -36,7 +36,7 @@ namespace Wavenet.Poc.Sandbox.Web.Model
         /// </summary>
         /// <value>The Address.</value>
         [Required]
-        [DataMember(Name = "name")]
+        [DataMember(Name = "address")]
         public Address Address { get; set; }
     }
 }
