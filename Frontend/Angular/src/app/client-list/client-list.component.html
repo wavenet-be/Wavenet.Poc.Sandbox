@@ -1,11 +1,22 @@
-<h2>Liste des clients</h2>
+<div class="client-list-panel">
+    <h2>Liste des clients</h2>
 
-<div *ngFor="let client of clients">
-    <h3>
-        <a [title]="client.name + ' details'">
-            {{ client.name }}
-        </a>
-    </h3>
+    <div *ngFor="let client of clients">
+        <h3>
+            <a [title]="client.name + ' details'" (click)="showDetail(client.id)">
+                {{ client.name }}
+            </a>
+        </h3>
+    </div>
+
+</div>
+
+<div *ngIf="currentClient" class="client-detail-panel">
+    <h4>Détails de {{ currentClient.name }}</h4>
+    <h5>Adresse :</h5>
+    {{ currentClient.address.street }}<br />
+    {{ currentClient.address.zipCode }} {{ currentClient.address.city }}<br />
+    {{ currentClient.address.country }}
 </div>
 
 <!-- 

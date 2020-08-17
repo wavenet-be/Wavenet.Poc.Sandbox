@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
-import { clients } from '../clients';
-import {ClientService} from '../../services/client.service';
+import {ClientService} from '../services/client.service';
 
 @Component({
   selector: 'app-client-list',
@@ -12,11 +11,22 @@ export class ClientListComponent {
 
   clients:any[];
 
+  currentClient:any;
+
   constructor(private clientService: ClientService)
   {
-    this.clients = this.clientService.getClients();
+    this.clientService.getClients().subscribe((data: any[]) => 
+    {
+      this.clients = data;
+    });
   }
 
+  public showDetail(clientId: number)
+  {
+    this.clientService.getClient(clientId).subscribe((data: any) => {
+      this.currentClient = data;
+    });
+  }
   
 }
 

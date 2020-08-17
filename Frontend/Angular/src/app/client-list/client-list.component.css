@@ -1,4 +1,13 @@
+.client-list-panel
+{
+    width: 300px;
+    float: left;
+}
 
+.client-detail-panel
+{
+    margin-left: 320px;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

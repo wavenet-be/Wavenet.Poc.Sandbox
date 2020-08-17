@@ -24,6 +24,8 @@ namespace Wavenet.Poc.Sandbox.Web
             config.Formatters.Add(new JsonMediaTypeFormatter());
 
             config.MapHttpAttributeRoutes();
+
+            config.EnableCors();
         }
     }
 }

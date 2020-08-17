@@ -9,6 +9,7 @@ namespace Wavenet.Poc.Sandbox.Web.Controllers
     using System.Linq;
     using System.Net;
     using System.Web.Http;
+    using System.Web.Http.Cors;
 
     using AutoMapper;
 
@@ -18,6 +19,7 @@ namespace Wavenet.Poc.Sandbox.Web.Controllers
     /// <summary>
     /// Manage all data for clients.
     /// </summary>
+    [EnableCors("*", "*", "*")]
     public class ClientController : ApiController
     {
         private readonly IMapper mapper;
