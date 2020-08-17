@@ -16,7 +16,7 @@
         <MvcBuildViews>false</MvcBuildViews>
         <UseIISExpress>true</UseIISExpress>
         <Use64BitIISExpress />
-        <IISExpressSSLPort />
+        <IISExpressSSLPort>44350</IISExpressSSLPort>
         <IISExpressAnonymousAuthentication />
         <IISExpressWindowsAuthentication />
         <IISExpressUseClassicPipelineMode />
@@ -46,6 +46,10 @@
     <ItemGroup>
         <Reference Include="Acme.Core.Extensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\packages\Acme.Core.Extensions.1.3.0\lib\net47\Acme.Core.Extensions.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Acme.Web.Security.Headers, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Acme.Web.Security.Headers.1.0.1\lib\net452\Acme.Web.Security.Headers.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="LightInject, Version=6.3.4.0, Culture=neutral, PublicKeyToken=null">
@@ -155,6 +159,7 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="Global.asax" />
+        <Content Include="Schemas\Acme.Web.Security.Headers.xsd" />
         <Content Include="Web.config" />
         <Content Include="Web.Debug.config">
             <DependentUpon>Web.config</DependentUpon>
