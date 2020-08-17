@@ -42,6 +42,7 @@ namespace Wavenet.Poc.Sandbox.Web
         private static void RegisterBusiness(this ServiceContainer container)
         {
             container.Register<IAdminDomain, AdminDomain>();
+            container.Register<IUserDomain, UserDomain>();
         }
 
         private static void RegisterData(this ServiceContainer container)

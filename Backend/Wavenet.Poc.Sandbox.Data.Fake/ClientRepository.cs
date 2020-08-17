@@ -44,7 +44,14 @@ namespace Wavenet.Poc.Sandbox.Data.Fake
         /// <inheritdoc />
         public List<Client> GetAll(bool includeConfidential)
         {
-            return this.ReadFromFile();
+            var data = this.ReadFromFile();
+
+            if (includeConfidential)
+            {
+                return data;
+            }
+
+            return data.Where(x => x.IsConfidential == false).ToList();
         }
 
         private List<Client> ReadFromFile()

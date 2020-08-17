@@ -53,6 +53,7 @@
           <Link>Version.cs</Link>
         </Compile>
         <Compile Include="Concrete\AdminDomain.cs" />
+        <Compile Include="Concrete\UserDomain.cs" />
         <Compile Include="IAdminDomain.cs" />
         <Compile Include="IUserDomain.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

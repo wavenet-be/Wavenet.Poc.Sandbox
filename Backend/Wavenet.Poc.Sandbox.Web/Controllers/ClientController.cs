@@ -1,4 +1,4 @@
-// <copyright file="AdminClientController.cs" company="Wavenet">
+// <copyright file="ClientController.cs" company="Wavenet">
 // Copyright (c) Wavenet. All rights reserved.
 // </copyright>
 
@@ -18,32 +18,20 @@ namespace Wavenet.Poc.Sandbox.Web.Controllers
     /// <summary>
     /// Manage all data for clients.
     /// </summary>
-    public class AdminClientController : ApiController
+    public class ClientController : ApiController
     {
-        private readonly IAdminDomain adminDomain;
         private readonly IMapper mapper;
+        private readonly IUserDomain userDomain;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AdminClientController" /> class.
+        /// Initializes a new instance of the <see cref="ClientController" /> class.
         /// </summary>
-        /// <param name="adminDomain">The domain managing admin actions.</param>
+        /// <param name="userDomain">The domain managing user actions.</param>
         /// <param name="mapper">The configured mapper.</param>
-        public AdminClientController(IAdminDomain adminDomain, IMapper mapper)
+        public ClientController(IUserDomain userDomain, IMapper mapper)
         {
-            this.adminDomain = adminDomain;
+            this.userDomain = userDomain;
             this.mapper = mapper;
-        }
-
-        /// <summary>
-        /// Get all the clients.
-        /// </summary>
-        /// <returns>The list of all clients.</returns>
-        [HttpGet]
-        [Route("api/admin/client/list")]
-        public List<ClientSummary> GetAll()
-        {
-            var clients = this.adminDomain.GetAllClients();
-            return this.mapper.Map<List<ClientSummary>>(clients);
         }
 
         /// <summary>
@@ -52,10 +40,10 @@ namespace Wavenet.Poc.Sandbox.Web.Controllers
         /// <param name="clientId">The id to get.</param>
         /// <returns>The list of all clients.</returns>
         [HttpGet]
-        [Route("api/admin/client/{clientId}")]
+        [Route("api/client/{clientId}")]
         public Client Get(int clientId)
         {
-            var client = this.adminDomain.GetClient(clientId);
+            var client = this.userDomain.GetClient(clientId);
 
             if (client == null)
             {
@@ -63,6 +51,18 @@ namespace Wavenet.Poc.Sandbox.Web.Controllers
             }
 
             return this.mapper.Map<Client>(client);
+        }
+
+        /// <summary>
+        /// Get all the clients.
+        /// </summary>
+        /// <returns>The list of all clients.</returns>
+        [HttpGet]
+        [Route("api/client/list")]
+        public List<ClientSummary> GetAll()
+        {
+            var clients = this.userDomain.GetAllClients();
+            return this.mapper.Map<List<ClientSummary>>(clients);
         }
     }
 }

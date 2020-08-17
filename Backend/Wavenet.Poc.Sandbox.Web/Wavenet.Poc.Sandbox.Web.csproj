@@ -160,6 +160,7 @@
         <Compile Include="App_Start\InjectionConfig.cs" />
         <Compile Include="App_Start\WebApiConfig.cs" />
         <Compile Include="Controllers\AdminClientController.cs" />
+        <Compile Include="Controllers\ClientController.cs" />
         <Compile Include="Controllers\HostingController.cs" />
         <Compile Include="Global.asax.cs">
             <DependentUpon>Global.asax</DependentUpon>
