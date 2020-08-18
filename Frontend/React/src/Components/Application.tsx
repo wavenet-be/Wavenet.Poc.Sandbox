@@ -1,12 +1,10 @@
 import React from 'react';
 import { TopBar } from './Navigation/TopBar';
-import { ClientList } from './Clients/ClientList';
+import { Clients } from '../Containers/Clients';
 
 export const Application = () => {
     return <div className="app-root">
         <TopBar />
-        <div className="container">
-            <ClientList />
-        </div>
+        <Clients />
     </div>
 }
